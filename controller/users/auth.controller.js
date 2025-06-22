@@ -37,7 +37,7 @@ const signup = async (req , res) => {
         })
 
     } catch (error) {
-        return res.status(400).json({
+        return res.status(500).json({
             code: 400,
             message: "Something from the server!",
             error: error.message,
