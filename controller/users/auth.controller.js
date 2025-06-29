@@ -5,7 +5,7 @@ const { getDB } = require("../../db/connectDB");
 const signup = async (req , res) => {
     const {username , email , password} = req.body; 
     try {
-        
+        console.log(" sign up api is hit");
         const db = getDB();
 
         const [existing] = await db.query("SELECT * FROM app_users WHERE email = ?" , [email]);
