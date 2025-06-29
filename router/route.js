@@ -15,12 +15,12 @@ router.post("/auth/sign-in" , validatorSignIn , login);
 /**sign up and in api routes for app users */
 
 router.post("/user/auth/sign-up" , validatorSignUp , userSignUp)
-router.post("/user/auth/sign-in" , validatorSignUp , userSignIn)
+router.post("/user/auth/sign-in" , validatorSignIn , userSignIn)
 
 /** CRUD ai for the trip  */
 
 router.post("/trip/crate", validatorTripCreate, authenticate, createTrip);
-router.get("/trip/get-all-trips" , authenticate , getTrips);
+router.get("/trip/get-all-trips"  , getTrips);
 router.get("/trip/get-trip-by-id/:id", authenticate, getTripById);
 router.delete("/trip/delete-trip-by-id/:id", authenticate , deleteTripById)
 
